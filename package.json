@@ -1,0 +1,41 @@
+{
+  "name": "funny-animations",
+  "version": "1.0.0",
+  "description": "Colección de animaciones en una sola clase para Tailwind CSS",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=3.0.0"
+  },
+  "author": "Sergio Sosa",
+  "license": "ISC",
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "plugin",
+    "animations",
+    "css"
+  ],
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "tailwindcss": "^4.3.3",
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2"
+  }
+}
