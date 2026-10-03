@@ -1,0 +1,44 @@
+/* src/styles.css */
+@import "tailwindcss";
+
+@theme {
+    --animate-bounce-fade: bounce-fade 0.8s ease-out forwards;
+
+    @keyframes bounce-fade {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        50% {
+            opacity: 0.5;
+            transform: translateY(10px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@theme {
+    --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+
+    @keyframes pulse-glow {
+        0% {
+            opacity: 1;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+
+        50% {
+            opacity: 0.5;
+            box-shadow: 0 0 5px rgba(59, 130, 246, 0.2);
+        }
+
+        100% {
+            opacity: 1;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+    }
+}

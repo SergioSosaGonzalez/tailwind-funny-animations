@@ -1,15 +1,16 @@
 {
   "name": "funny-animations",
   "version": "1.0.0",
+  "type": "module",
   "description": "Colección de animaciones en una sola clase para Tailwind CSS",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     }
   },
   "files": [
@@ -18,7 +19,9 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "peerDependencies": {
     "tailwindcss": ">=3.0.0"
@@ -33,7 +36,13 @@
     "css"
   ],
   "devDependencies": {
+    "@storybook/addon-styling-webpack": "^3.0.2",
+    "@storybook/html-vite": "^10.6.1",
+    "@tailwindcss/postcss": "^4.3.3",
+    "autoprefixer": "^10.6.1",
     "esbuild": "^0.28.2",
+    "postcss": "^8.5.28",
+    "storybook": "^10.6.1",
     "tailwindcss": "^4.3.3",
     "tsup": "^8.5.1",
     "typescript": "^7.0.2"
